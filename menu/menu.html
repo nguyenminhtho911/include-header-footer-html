@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <h2>menu</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ab in provident quis, odio aperiam officia quibusdam voluptates commodi aliquid dolore animi iste reprehenderit consequatur sed quos alias ratione maiores.</p>
+    </main>
+    <footer></footer>
+    <script>
+        fetch("../includes/header.html")
+            .then((response) => {
+                return response.text();
+            })
+            .then((data) => {
+                console.log(data)
+                document.querySelector("header").innerHTML = data;
+            });
+
+        fetch("../includes/footer.html")
+            .then((response) => {
+                return response.text();
+            })
+            .then((data) => {
+                document.querySelector("footer").innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>
